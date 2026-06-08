@@ -21,10 +21,10 @@
   .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
   .eyebrow{font-weight:700;letter-spacing:.24em;font-size:12px;color:var(--gold);text-transform:uppercase}
   .gold-text{background:linear-gradient(135deg,var(--gold-lt),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-block;padding:15px 28px;border-radius:9px;font-weight:600;font-size:15px;text-decoration:none;transition:.2s;cursor:pointer}
+  .btn{display:inline-block;padding:15px 28px;border-radius:9px;font-weight:600;font-size:15px;text-decoration:none;transition:.2s;cursor:pointer;border:none}
   .btn-gold{background:linear-gradient(135deg,var(--gold-lt),var(--gold2));color:#241803;box-shadow:0 8px 24px rgba(231,180,85,.18)}
   .btn-gold:hover{filter:brightness(1.06);transform:translateY(-2px)}
-  .btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff;margin-left:12px}
+  .btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff;margin-left:12px;background:transparent}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
   .mark{width:34px;height:34px;flex:none}
@@ -36,7 +36,7 @@
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
   .navlinks a{color:#cfd5df;text-decoration:none;margin-left:26px;font-size:15px;font-weight:500}
   .navlinks a:hover{color:var(--gold)}
-  @media(max-width:780px){.navlinks a:not(.btn){display:none}}
+  @media(max-width:820px){.navlinks a:not(.btn){display:none}}
 
   .hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;
@@ -47,7 +47,7 @@
   .hero .markbig{width:84px;height:84px;margin-bottom:22px}
   .hero h1{font-size:clamp(40px,6.2vw,70px);max-width:15ch;margin:14px 0 20px}
   .hero p.lead{font-size:clamp(17px,2vw,21px);color:#d7dde6;max-width:50ch;margin-bottom:34px}
-  .tagline{margin-top:46px;font-family:'Fraunces';font-style:italic;font-size:18px;color:var(--gold-lt);letter-spacing:.02em}
+  .tagline{margin-top:46px;font-family:'Fraunces';font-style:italic;font-size:18px;color:var(--gold-lt)}
 
   section{padding:96px 0}
   .center{text-align:center}
@@ -78,22 +78,42 @@
   .sol b{color:#fff;display:block;margin-bottom:4px;font-size:16px}
   .sol span{color:var(--muted);font-size:14px}
 
+  /* Founder */
+  .founder{display:grid;grid-template-columns:160px 1fr;gap:34px;align-items:center;max-width:780px;margin:46px auto 0;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:34px}
+  @media(max-width:640px){.founder{grid-template-columns:1fr;text-align:center;gap:20px}}
+  .avatar{width:150px;height:150px;border-radius:18px;background:linear-gradient(135deg,#2b2e33,#1a1c20);display:grid;place-items:center;border:1px solid rgba(231,180,85,.4);margin:0 auto}
+  .avatar .markbig{width:90px;height:90px}
+  .founder h3{color:#fff;font-size:26px}
+  .founder .role{color:var(--gold);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:4px 0 12px}
+  .founder p{color:#c2cee0;font-size:15px;margin-bottom:14px}
+  .founder a{color:var(--gold-lt);text-decoration:none;font-weight:500;font-size:15px;display:inline-block;margin-right:18px}
+  .founder a:hover{color:var(--gold)}
+
+  /* Form */
+  .formwrap{max-width:760px;margin:40px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:38px;text-align:left}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:13px;font-weight:600;color:#cdd4de;margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;background:#16181c;border:1px solid var(--line);border-radius:9px;padding:12px 14px;color:#fff;font-family:inherit;font-size:15px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .field textarea{min-height:70px;resize:vertical}
+  .formwrap .btn-gold{width:100%;text-align:center;margin-top:8px;font-size:16px;padding:16px}
+  #formresult{margin-top:16px;text-align:center;font-size:15px;color:var(--gold-lt);min-height:22px}
+  .hp{position:absolute;left:-9999px}
+
   .faq{max-width:780px;margin:44px auto 0;text-align:left}
   .qa{border-bottom:1px solid var(--line);padding:22px 0}
   .qa b{color:#fff;font-size:17px;display:block;margin-bottom:7px}
   .qa p{color:var(--muted);font-size:15px}
 
-  .cta{position:relative;text-align:center;overflow:hidden;background:var(--char)}
-  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 380px at 50% 0%, rgba(231,180,85,.20), transparent 65%)}
-  .cta .wrap{position:relative;z-index:2}
-  .cta h2{font-size:clamp(30px,4.4vw,48px);margin-bottom:14px}
-  .cta p{color:#cdd4de;max-width:50ch;margin:0 auto 32px}
-
   footer{background:#0f1013;border-top:1px solid var(--line);padding:48px 0 36px;color:#8c95a3;font-size:14px}
   footer .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
   footer a{color:#aab3c1;text-decoration:none;margin-left:22px}
   footer a:hover{color:var(--gold)}
-  .fine{margin-top:26px;font-size:12px;color:#5f6775;max-width:82ch}
+  footer .emails{margin-top:18px;color:#aab3c1}
+  footer .emails a{margin:0 16px 0 0}
+  .fine{margin-top:24px;font-size:12px;color:#5f6775;max-width:82ch}
 </style>
 </head>
 <body>
@@ -120,7 +140,7 @@
     <a href="#how">How It Works</a>
     <a href="#about">About</a>
     <a href="#faq">FAQ</a>
-    <a href="#contact" class="btn btn-gold" style="padding:11px 22px">Get in Touch</a>
+    <a href="#lead" class="btn btn-gold" style="padding:11px 22px">Get in Touch</a>
   </div>
 </div></nav>
 
@@ -129,7 +149,7 @@
   <p class="eyebrow">QuantumLeap Wholesale Real Estate</p>
   <h1>Real Estate Solutions <span class="gold-text">for People Who Want More</span></h1>
   <p class="lead">Selling your home or building your future shouldn't be complicated. We make it simple — with honest, creative options that put everyday people first.</p>
-  <a href="#contact" class="btn btn-gold">Get a Free Consultation</a>
+  <a href="#lead" class="btn btn-gold">Get a Free Consultation</a>
   <a href="#how" class="btn btn-ghost">See How It Works</a>
   <p class="tagline">"For people who want more."</p>
 </div></header>
@@ -151,7 +171,7 @@
     <h2>A Smarter, Friendlier Way to Do Real Estate</h2>
     <p>A traditional sale isn't your only option. We listen first, then build a solution around <em>your</em> situation — so you keep more, stress less, and always understand exactly what's happening.</p>
     <p>Real people. Honest answers. A real path forward.</p>
-    <a href="#contact" class="btn btn-gold" style="margin-top:8px">Talk to a Real Person</a>
+    <a href="#lead" class="btn btn-gold" style="margin-top:8px">Talk to a Real Person</a>
   </div>
   <div class="solutions">
     <div class="sol"><b>Sell on Your Terms</b><span>Get a fair offer without repairs, showings, or commissions — and close on the date that works for you.</span></div>
@@ -173,10 +193,63 @@
 <section class="charbg center" id="about"><div class="wrap">
   <p class="eyebrow">Who We Are</p>
   <h2 class="h2">Built for Everyday People</h2>
-  <p class="sub" style="font-size:17px;color:#cdd4de">QuantumLeap Wholesale was founded by <b style="color:#fff">Nikit Patel</b> on a simple idea: real estate should work for regular people, not just the experts. We bring creative, people-first solutions to homeowners and new investors alike — with honesty, patience, and a genuine commitment to win-win outcomes. When you call, you talk to a real person who actually cares about your situation.</p>
+  <p class="sub" style="font-size:17px;color:#cdd4de">QuantumLeap Wholesale was founded on a simple idea: real estate should work for regular people, not just the experts. We bring creative, people-first solutions to homeowners and new investors alike — with honesty, patience, and a genuine commitment to win-win outcomes. When you reach out, you talk to a real person who actually cares about your situation.</p>
+
+  <div class="founder">
+    <div class="avatar"><svg class="markbig"><use href="#qmark"/></svg></div>
+    <div>
+      <h3>Nikit P</h3>
+      <div class="role">Founder &amp; CEO</div>
+      <p>I started QuantumLeap Wholesale to give homeowners a better, more human way to sell — and to help everyday investors get into real estate the smart way. Every deal we do is built to leave both sides better off. If you've got a property or a goal, I'd genuinely love to hear from you.</p>
+      <a href="mailto:nikit.p@quantumleapwholesale.com">✉ nikit.p@quantumleapwholesale.com</a>
+      <a href="mailto:hello@quantumleapwholesale.com">🏢 hello@quantumleapwholesale.com</a>
+    </div>
+  </div>
 </div></section>
 
-<section class="center" id="faq"><div class="wrap">
+<section class="center" id="lead"><div class="wrap">
+  <p class="eyebrow">Sell Your Property</p>
+  <h2 class="h2">Tell Us About Your Property</h2>
+  <p class="sub">Share a few details and we'll get back to you within one business day with your options — free, no obligation.</p>
+
+  <form class="formwrap" id="leadform">
+    <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+    <input type="hidden" name="subject" value="🔥 New Seller Lead — QuantumLeap Wholesale">
+    <input type="hidden" name="from_name" value="QuantumLeap Website">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+    <div class="grid2">
+      <div class="field"><label>Your Name *</label><input name="Name" required></div>
+      <div class="field"><label>Email *</label><input type="email" name="Email" required></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Phone</label><input name="Phone"></div>
+      <div class="field"><label>Property Address</label><input name="Property Address"></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Property Type</label>
+        <select name="Property Type"><option value="">Select…</option><option>Single Family</option><option>Multi-Family (2-4 units)</option><option>Condo / Townhome</option><option>Apartment Building (5+)</option><option>Land</option><option>Other</option></select></div>
+      <div class="field"><label>Asking Price</label><input name="Asking Price" placeholder="$"></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Square Footage</label><input name="Square Footage"></div>
+      <div class="field"><label>Year Built</label><input name="Year Built"></div>
+    </div>
+    <div class="field"><label>Any recent renovations or updates?</label><textarea name="Renovations" placeholder="Kitchen, roof, windows, etc."></textarea></div>
+    <div class="field"><label>What else does the property have? (garage, basement, lot size, etc.)</label><textarea name="Other Features"></textarea></div>
+    <div class="grid2">
+      <div class="field"><label>How old is the furnace?</label><input name="Furnace Age" placeholder="e.g. 8 years"></div>
+      <div class="field"><label>How old is the water heater?</label><input name="Water Heater Age" placeholder="e.g. 4 years"></div>
+    </div>
+    <div class="field"><label>How soon are you looking to close?</label>
+      <select name="Timeline to Close"><option value="">Select…</option><option>ASAP</option><option>Within 30 days</option><option>30–60 days</option><option>60–90 days</option><option>90+ days</option><option>Just exploring</option></select></div>
+
+    <button type="submit" class="btn btn-gold">Send My Details</button>
+    <div id="formresult"></div>
+  </form>
+</div></section>
+
+<section class="charbg center" id="faq"><div class="wrap">
   <p class="eyebrow">Questions</p>
   <h2 class="h2">Good Questions, Honest Answers</h2>
   <div class="faq">
@@ -188,20 +261,42 @@
   </div>
 </div></section>
 
-<section class="cta" id="contact"><div class="wrap">
-  <p class="eyebrow">Let's Talk</p>
-  <h2>Ready When You Are</h2>
-  <p>Tell us about your home or your goals — we'll show you what's possible. No pressure, no obligation, just real help.</p>
-  <a href="mailto:hello@quantumleapwholesale.com" class="btn btn-gold">Get a Free Consultation</a>
-</div></section>
-
 <footer><div class="wrap">
   <div class="top">
     <a class="logo" href="#top"><svg class="mark" style="width:28px;height:28px"><use href="#qmark"/></svg><span class="name" style="font-size:17px">QuantumLeap Wholesale</span></a>
-    <div><a href="#approach">Our Approach</a><a href="#how">How It Works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+    <div><a href="#approach">Our Approach</a><a href="#how">How It Works</a><a href="#about">About</a><a href="#lead">Sell Your Property</a></div>
   </div>
-  <p class="fine">QuantumLeap Wholesale LLC is a private real estate investment company. We are not a brokerage and do not provide legal, tax, or financial advice. All offers are subject to property evaluation and agreement of terms. © 2026 QuantumLeap Wholesale — For people who want more.</p>
+  <div class="emails">
+    <a href="mailto:nikit.p@quantumleapwholesale.com">nikit.p@quantumleapwholesale.com</a>
+    <a href="mailto:hello@quantumleapwholesale.com">hello@quantumleapwholesale.com</a>
+  </div>
+  <p class="fine">QuantumLeap Wholesale LLC — Nikit P, Founder &amp; CEO. A private real estate investment company. We are not a brokerage and do not provide legal, tax, or financial advice. All offers are subject to property evaluation and agreement of terms. © 2026 QuantumLeap Wholesale — For people who want more.</p>
 </div></footer>
 
+<script>
+  const f = document.getElementById('leadform');
+  const out = document.getElementById('formresult');
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    out.textContent = 'Sending…';
+    try {
+      const data = Object.fromEntries(new FormData(f).entries());
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const j = await res.json();
+      if (j.success) {
+        out.textContent = "Thank you! We've received your details and will reach out within one business day.";
+        f.reset();
+      } else {
+        out.textContent = "Sorry — something went wrong. Please email us at hello@quantumleapwholesale.com.";
+      }
+    } catch (err) {
+      out.textContent = "Sorry — something went wrong. Please email us at hello@quantumleapwholesale.com.";
+    }
+  });
+</script>
 </body>
 </html>
